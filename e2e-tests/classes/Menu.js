@@ -49,10 +49,8 @@ class Menu extends Helpers {
                 await expect(this.waitUntilElementIsInvisible(this.feedback));
                 await this.waitUntilElementIsVisible(logOutPage.dropDownButton);
                 await this.waitUntilElementIsVisible(this.navbarLogo);
-                console.log("tester");
                 break;
             case 'eptesterdm':
-                console.log("dm");
                 await this.checkPresenceOfTextInElement(this.notes, "Notes");
                 await this.checkPresenceOfTextInElement(this.form, "Form");
                 await this.checkPresenceOfTextInElement(this.history, "History");
@@ -63,7 +61,6 @@ class Menu extends Helpers {
                 await this.waitUntilElementIsVisible(this.navbarLogo);
                 break;
             default:
-                console.log("ForAll");
                 await this.checkPresenceOfTextInElement(this.notes, "Notes");
                 await this.checkPresenceOfTextInElement(this.form, "Form");
                 await this.checkPresenceOfTextInElement(this.history, "History");
@@ -96,25 +93,21 @@ class Menu extends Helpers {
     async checkToolsMenu(username) {
         switch (username) {
             case "ephr":
-                console.log("ForHR");
                 await this.waitUntilElementIsVisible(this.toolsMenu);
                 await this.checkListCount(1);
                 await this.checkLisText("Assign employee to Talent Manager", 1);
                 break;
             case "epsm":
-                console.log("ForSM");
                 await this.waitUntilElementIsVisible(this.toolsMenu);
                 await this.checkListCount(1);
                 await this.checkLisText("Assign employee to Delivery (Service) Manager", 1);
                 break;
             case "epdelivery1":
-                console.log("ForSM");
                 await this.waitUntilElementIsVisible(this.toolsMenu);
                 await this.checkListCount(1);
                 await this.checkLisText("Assign employee to Delivery (Service) Manager", 1);
                 break;
             case "ephrdm":
-                console.log("ForHHR");
                 await this.waitUntilElementIsVisible(this.toolsMenu);
                 await this.checkListCount(2);
                 await this.checkLisText("Assign employee to Talent Manager", 1);

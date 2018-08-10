@@ -18,7 +18,7 @@ class Helpers {
     async waitUntilElementIsClickable(elem) {
         return browser.wait(ExpectedConditions.elementToBeClickable(element(elem)), 5000, "Element is not clickable");
     }
-    
+
     async click(elem) {
         await this.waitUntilElementIsVisible(elem);
         await this.waitUntilElementIsClickable(elem);
