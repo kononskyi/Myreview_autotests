@@ -1,0 +1,31 @@
+{
+  "name": "myreview",
+  "private": true,
+  "version": "0.0.0",
+  "description": "myreview",
+  "repository": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^4.2.1",
+    "http-server": "^0.11.1",
+    "jasmine-core": "^2.4.1",
+    "protractor": "^5.4.0",
+    "protractor-cucumber-framework": "^6.0.0"
+  },
+  "scripts": {
+    "update-deps": "npm update",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 ./app",
+    "pretest": "npm install",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js",
+    "update-index-async": "node -e \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/bower_components/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
