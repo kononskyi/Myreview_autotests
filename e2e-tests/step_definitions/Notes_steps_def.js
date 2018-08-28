@@ -9,21 +9,21 @@ When(/^User click on Add objective button$/, async () => {
     await notesSteps.clickAddObjective();
 });
 
-When(/^Go to Notes item, enter "([^"]*)" in title and "([^"]*)" in comment field$/, async (title,comment) => {
-    await notesSteps.openAndFillFields(title,comment);
+When(/^Go to Notes item, enter "([^"]*)" in title and "([^"]*)" in comment field$/, async (title, comment) => {
+    await notesSteps.openAndFillFields(title, comment);
 });
 
 When(/^Click on Save button$/, async () => {
     await notesSteps.clickSave();
 });
 
-Then(/^New objective is created with "([^"]*)" and "([^"]*)"$/, async (title,comment) => {
-   await notesSteps.checkJustAddedObjective(title,comment);
-   await notesSteps.closeTab();
+Then(/^New objective is created with "([^"]*)" and "([^"]*)"$/, async (title, comment) => {
+    await notesSteps.checkJustAddedObjective(title, comment);
+    await notesSteps.closeTab();
 });
 
-When(/^Go to Notes item, enter "([^"]*)" symbols in title and "([^"]*)" symbols in comment field$/,{timeout: 4 * 5000}, async (symb1,symb2) => {
-    await notesSteps.fillLongInFields(symb1,symb2);
+When(/^Go to Notes item, enter "([^"]*)" symbols in title and "([^"]*)" symbols in comment field$/, {timeout: 4 * 5000}, async (symb1, symb2) => {
+    await notesSteps.fillLongInFields(symb1, symb2);
 });
 
 Then(/^New objective is created with 255 symbols in title and 2500 symbols in comment$/, async () => {

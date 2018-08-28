@@ -104,16 +104,12 @@ class NotesSteps extends NotesPage {
     }
 
     async clickOnCancelButton() {
-        //let beforedel = this.checkIfNotesListIsEmpty();
+        let beforedel = this.checkIfNotesListIsEmpty();
         await this.clickOnDeleteButton();
         await this.click(this.cancelDeletingButton);
-/*
-        console.log(await this.checkIfObjectCount());
-        console.log(beforedel);
         if (await this.checkIfObjectCount() !== await beforedel) {
             throw Error("Check last objective, error deleting!")
         }
-        */
     }
 
     async checkbasicPage(login) {
