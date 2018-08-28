@@ -8,8 +8,8 @@ exports.config = {
     specs: [
         'e2e-tests/Login.feature',
         'e2e-tests/Logout.feature',
-        'e2e-tests/Menu.feature'
-       // 'e2e-tests/Notes.feature',
+        'e2e-tests/Menu.feature',
+        'e2e-tests/Notes.feature'
     ],
 
     capabilities: {
@@ -24,10 +24,10 @@ exports.config = {
         require: [
             'e2e-tests/step_definitions/Login_steps_def.js',
             'e2e-tests/step_definitions/Logout_steps_def.js',
-            'e2e-tests/step_definitions/Menu_steps_def.js'
-            //'e2e-tests/step_definitions/Notes_steps_def.js',
+            'e2e-tests/step_definitions/Menu_steps_def.js',
+            'e2e-tests/step_definitions/Notes_steps_def.js'
         ],
-        tags: [],
+        tags: ['@test42'],
         strict: true,
         compiler: []
     }

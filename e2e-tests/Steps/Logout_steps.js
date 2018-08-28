@@ -27,6 +27,7 @@ class LogOutSteps extends LogOutPage {
         await loginSteps.clickLoginButton();
         await loginSteps.checkIfUserIsLoggedSuccessfully(login);
     }
+
 }
 
 module.exports = LogOutSteps;

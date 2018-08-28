@@ -68,6 +68,10 @@ class Helpers {
         let textFromEl = element(elem).getText();
         await expect(textFromEl).to.eventually.contains(text);
     }
+
+    async browserSleep(ms) {
+        return browser.sleep(ms);
+    }
 }
 
 module.exports = Helpers;
